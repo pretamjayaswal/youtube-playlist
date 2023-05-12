@@ -2,3 +2,4 @@
 venv
 /config.py
 config.py
+/local_config.py
