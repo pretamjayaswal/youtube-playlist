@@ -1,7 +1,47 @@
-import logging
+def smart_divide(func):
+    def inner(a, b):
+        if b == 0:
+            print("Whoops! Division by 0")
+            return None
 
-logging.debug('This is a debug message')
-logging.info('This is an info message')
-logging.warning('This is a warning message')
-logging.error('This is an error message')
-logging.critical('This is a critical message')
+        return func(a, b)
+    return inner
+
+
+@smart_divide
+def divide(a, b):
+    print(a/b)
+
+divide(8, 2)
+
+
+
+
+def smarty_div(func):
+    def inner(x,y):
+        if y==0:
+            print('denom is 0 !!...aborted')
+            return None
+        return func(x,y)
+    return inner
+
+@smarty_div
+def mydiv(x,y):
+    print(x/y)
+
+mydiv(16,0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

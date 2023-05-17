@@ -64,8 +64,6 @@ def fetch_playlist_items(google_api_key, playlist_id, page_token = None):
 
     if next_page_token is not None:
         yield from fetch_playlist_items(google_api_key, yt_playlist_id, next_page_token)       
-    
-
 
 
 
